@@ -1,0 +1,346 @@
+/*
+01000011 01101111 01101110 01110011 01101111 01101100 01100101 01000011 01010011 01010011 
+
+   .o88b.  .d88b.  d8b   db .d8888.  .d88b.  db      d88888b  .o88b. .d8888. .d8888. 
+  d8P  Y8 .8P  Y8. 888o  88 88'  YP .8P  Y8. 88      88'     d8P  Y8 88'  YP 88'  YP 
+  8P      88    88 88V8o 88 `8bo.   88    88 88      88ooooo 8P      `8bo.   `8bo.   
+  8b      88    88 88 V8o88   `Y8b. 88    88 88      88~~~~~ 8b        `Y8b.   `Y8b. 
+  Y8b  d8 `8b  d8' 88  V888 db   8D `8b  d8' 88booo. 88.     Y8b  d8 db   8D db   8D 
+   `Y88P'  `Y88P'  VP   V8P `8888Y'  `Y88P'  Y88888P Y88888P  `Y88P' `8888Y' `8888Y' 
+
+
+    +-+ +-+   +-+ +-+ +-+ +-+ +-+ +-+   +-+ +-+ +-+ +-+ +-+
+    |B| |y|   |F| |l| |a| |v| |i| |o|   |C| |o| |n| |c| |a|
+    +-+ +-+   +-+ +-+ +-+ +-+ +-+ +-+   +-+ +-+ +-+ +-+ +-+
+
+    Text made with ASCII Art Gen: https://asciiartgen.now.sh/
+
+01000011 01101111 01101110 01110011 01101111 01101100 01100101 01000011 01010011 01010011 
+*/
+
+
+/* Font from Google Fonts: COURIER PRIME */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+  --bk: rgb(0,0,0);
+  --gn: rgb(0, 255, 0);
+  --wt: rgb(255,255,255);
+  --pk: rgb(255, 0, 150);
+  --bu: rgb(0, 175, 255);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--gn);
+  border-radius: 10px;
+  margin: 25px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gn);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gn);
+}
+
+
+body {
+  background-color: var(--bk);
+  margin: 50px;
+  color: var(--gn);
+  /* Hide scrollbars */
+  /* overflow: hidden; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+
+html{
+  scroll-behavior: smooth; /*  Not supported in Safari (Safado)*/
+  font-family: 'Courier Prime', monospace;
+  font-size: 18px;
+}
+
+
+a, abbr, address,
+article, aside, canvas, blockquote,
+b, bdo, button,
+cite, caption, code, colgroup, col,
+details, del, dl, dd, dt, div, dfn,
+em,
+fieldset, footer,
+hr, h1, h2, h3, h4, h5, h6, header,
+i, ins, input,
+kbd,
+label, legend, li, link,
+mark,
+option, optgroup, output, ol,
+p, picture, pre,
+rp, rt,
+q,
+s, samp, span, strong, small, sub, sup, summary, samp, select, section,
+table, textarea, tbody, textarea, template, time, tfoot, th, thead, time, td, tr,
+u, ul,
+var, video,
+wbr{
+  color: var(--gn);
+  background-color: var(--bk);
+  text-align: left;
+}
+
+
+
+/* ON SELECTOR SELECTION */
+::selection {
+  background: var(--gn);
+  color: var(--wt);
+}
+
+
+
+/* MARGINS & PADDINGS */
+pre {
+  margin: 25px;
+}
+output{
+  margin: 25px;
+}
+dd {
+  margin-left: 40px;
+}
+dialog {
+  margin-top: -30px;
+  background: var(--gn);
+}
+th{
+  margin: 10px;
+}
+hr{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+input, select{
+  margin: 5px;
+}
+fieldset{
+
+  padding: 50px;
+}
+input[type="submit"] {
+  margin-top: 100px;
+}
+
+
+
+/* DISPLAY */
+pre {
+  display: block;
+}
+dd {
+  display: block;
+}
+
+
+
+/* BORDER */
+table, th, td, tr, hr, dialog, embed, fieldset{
+  border: 2px solid var(--gn);
+}
+
+
+
+/* PADDING */
+table, th, td, tr, dialog {
+  text-align: center;
+  padding: 5px;
+}
+
+
+
+/* ELEMENT COLORS */
+th{
+  background-color: var(--gn);
+  color: var(--bk);
+}
+
+
+
+/* WIDTH % */
+.w100pc{
+  width: 100%;
+}
+
+
+
+/* ELEMENTS STYLE */
+/* MISC */
+button, input, datalist, select{
+  padding: 12px;
+  background: var(--gn);
+  color: var(--bk);
+  border: 0px;
+  text-transform: uppercase;
+  font-family: 'Courier Prime', monospace;
+  font-size: 18px;
+}
+input:focus {
+  background-color: var(--bk);
+  color: var(--gn);
+  border: 0px solid var(--gn);
+}
+
+/* CHECKBOX */
+/* CONTAINER */
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  padding-top: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* HIDE DEFAULT */
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* CREATE CUSTOM */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: var(--wt);
+}
+/* ON MOUSE-OVER, ADD BG COLOR */
+.check-container:hover input ~ .checkmark {
+  background-color: var(--gn);
+}
+/* ON CHECKED, ADD BG GREEN COLOR */
+.check-container input:checked ~ .checkmark {
+  background-color: var(--gn);
+}
+/* HIDDEN WHEN NOT CHECKED */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* CHECKMARK ON CHECKE */
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* STYLE CHECKMARK INDICATOR */
+.check-container .checkmark:after {
+  left: 11px;
+  top: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* UL & LI STYLE */
+ul{
+  list-style: none; /* NO HTML BULLETS */
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding-left: 15px;
+}
+li::before {
+  content: "▶";
+  padding-right: 10px;
+  color: var(--gn);
+}
+li > a{
+  color: var(--gn);
+  background-color: var(--bk);
+  padding: 0px;
+  border: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+
+
+/* LINKS */
+a{
+  background: var(--gn);
+  color: var(--bk);
+  padding: 12px;
+  border: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:link, a:visited {
+  border: 0;
+}
+a:hover, a:active{
+  background: var(--bk);
+  color: var(--gn);
+}
+a.botao {
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+
+
+/* FIELDSET */
+legend {
+  background-color: var(--gn);
+  color: var(--bk);
+  text-align: center;
+  padding: 5px;
+  border: 2px solid var(--gn);
+}
+.fieldset{
+  display:inline-table;
+  width:100%;
+}
+.fieldset-element {
+  display:inline-grid;
+  width:50%;
+}
+.fieldset-label {
+  display:inline-table;
+  width:50%;
+  text-transform: uppercase;
+}
+
+
+
+/* CURSOR */
+#piscada{
+  width:200px;
+  height: 50px;
+  background-color: var(--gn);
+  animation-name: piscada;
+  animation: blink 0.75s linear infinite;
+}
+@keyframes blink{
+0%{opacity: 1;}
+1%{opacity: 0;}
+50%{opacity: .0;}
+751%{opacity: 1;}
+100%{opacity: 1;}
+}
